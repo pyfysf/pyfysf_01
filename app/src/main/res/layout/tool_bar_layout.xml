@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tb_tool_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorPrimary"
+    android:minHeight="?attr/actionBarSize"
+    android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    app:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_tool_bar_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/ib_toobar_left_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/tool_bar_left_icon" />
+
+        <EditText
+            android:id="@+id/et_toolbar_search"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="45dp"
+            android:gravity="center"
+            android:hint="学校" />
+
+        <ImageButton
+            android:id="@+id/ib_toobar_right_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/tool_bar_right_icon" />
+
+        <ImageButton
+            android:id="@+id/ib_toobar_search_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/ib_toobar_right_icon"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/tool_bar_search_icon" />
+
+
+    </RelativeLayout>
+
+<RadioGroup
+    android:id="@+id/rg_detail_send_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+    <RadioButton
+        android:id="@+id/btn_receive_list"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:button="@null"
+        android:layout_height="wrap_content"
+        android:textColor="@drawable/list_btn_select_textcolor"
+        android:text="接单"
+
+        />
+    <RadioButton
+        android:gravity="center"
+        android:button="@null"
+        android:id="@+id/btn_send_list"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="发单"
+        android:textColor="@drawable/list_btn_select_textcolor"
+        />
+</RadioGroup>
+
+
+</android.support.v7.widget.Toolbar>
